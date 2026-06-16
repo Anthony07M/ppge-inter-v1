@@ -76,7 +76,7 @@
           '</div>' +
           '<div class="hidden md:flex items-center gap-2 bg-surface-container-low rounded-lg px-3 py-2 w-72">' +
             '<span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">search</span>' +
-            '<input data-mock="" placeholder="Buscar recursos…" class="bg-transparent outline-none text-body-sm w-full placeholder:text-on-surface-variant">' +
+            '<input data-mock="" placeholder="Buscar recursos…" class="bg-transparent outline-none border-0 focus:ring-0 text-body-sm w-full placeholder:text-on-surface-variant">' +
           '</div>' +
           '<button data-mock="Nenhuma notificação nova" class="relative text-on-surface-variant hover:text-primary"><span class="material-symbols-outlined">notifications</span>' +
             '<span class="absolute -top-0.5 -right-0.5 w-2 h-2 bg-error rounded-full"></span></button>' +
