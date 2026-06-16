@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Configurações</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Configurações" data-crumb="Configurações"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[900px]">
+  <!-- Perfil -->
+  <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+    <div class="flex items-center gap-2 px-5 py-4 border-b border-surface-container-high">
+      <span class="material-symbols-outlined text-primary">person</span>
+      <h2 class="font-display text-headline-md text-primary">Perfil</h2>
+    </div>
+    <div class="p-5 flex flex-wrap items-center gap-5">
+      <div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-display text-2xl font-bold" data-bind="avatar"></div>
+      <div class="flex-1 min-w-[200px]">
+        <p class="font-display text-body-lg font-semibold text-on-surface" data-bind="nome"></p>
+        <p class="text-body-sm text-on-surface-variant" data-bind="papel"></p>
+        <p class="text-label-sm text-on-surface-variant" data-bind="escopo"></p>
+      </div>
+      <button onclick="PPG.switchProfile()" class="flex items-center gap-2 border border-surface-container-high rounded-lg px-4 py-2.5 text-body-sm font-semibold hover:bg-surface-container-low transition">
+        <span class="material-symbols-outlined" style="font-size:20px">swap_horiz</span>Trocar de perfil</button>
+    </div>
+  </section>
+
+  <!-- Preferências -->
+  <form data-mock-form="Preferências salvas" class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+    <div class="flex items-center gap-2 px-5 py-4 border-b border-surface-container-high">
+      <span class="material-symbols-outlined text-primary">tune</span>
+      <h2 class="font-display text-headline-md text-primary">Preferências</h2>
+    </div>
+    <div class="divide-y divide-surface-container-high">
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <div><p class="text-body-sm font-medium text-on-surface">Notificações por e-mail</p><p class="text-label-sm text-on-surface-variant">Avisos de prazos da CAPES e Sucupira</p></div>
+        <input type="checkbox" checked class="rounded text-primary focus:ring-primary w-5 h-5"></label>
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <div><p class="text-body-sm font-medium text-on-surface">Resumo semanal</p><p class="text-label-sm text-on-surface-variant">Indicadores consolidados toda segunda-feira</p></div>
+        <input type="checkbox" checked class="rounded text-primary focus:ring-primary w-5 h-5"></label>
+      <label class="flex items-center justify-between p-5 cursor-pointer">
+        <div><p class="text-body-sm font-medium text-on-surface">Idioma da interface</p><p class="text-label-sm text-on-surface-variant">Aplicado em todo o sistema</p></div>
+        <select class="bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2 text-body-sm outline-none focus:border-primary"><option>Português (BR)</option><option>English</option><option>Español</option></select></label>
+    </div>
+    <div class="flex justify-end gap-3 p-5 border-t border-surface-container-high">
+      <button type="submit" class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+        <span class="material-symbols-outlined" style="font-size:20px">save</span>Salvar preferências</button>
+    </div>
+  </form>
+
+  <!-- Sessão -->
+  <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center justify-between">
+    <div><p class="text-body-sm font-medium text-on-surface">Encerrar sessão</p><p class="text-label-sm text-on-surface-variant">Você voltará à tela de acesso.</p></div>
+    <a href="index.html" class="flex items-center gap-2 border border-error/40 text-error rounded-lg px-4 py-2.5 text-body-sm font-semibold hover:bg-error/5 transition">
+      <span class="material-symbols-outlined" style="font-size:20px">logout</span>Sair</a>
+  </section>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>

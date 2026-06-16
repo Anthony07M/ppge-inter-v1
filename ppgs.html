@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Programas de Pós-Graduação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Programas de Pós-Graduação" data-crumb="PPGs"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1280px]">
+  <div class="flex flex-wrap items-center justify-between gap-3 -mt-1">
+    <p class="text-on-surface-variant text-body-md">1.240 programas conectados à rede nacional. Filtre, audite e acompanhe a situação de cada um.</p>
+    <a href="cadastro-ppg.html" class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+      <span class="material-symbols-outlined" style="font-size:20px">add</span>Cadastrar PPG</a>
+  </div>
+
+  <!-- Filtros -->
+  <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-3 flex flex-wrap gap-3">
+    <div class="flex items-center gap-2 bg-surface-container-low rounded-lg px-3 py-2 flex-1 min-w-[220px]">
+      <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">search</span>
+      <input data-filter="#tbl-ppgs" placeholder="Buscar por nome, área ou instituição…" class="bg-transparent outline-none text-body-sm w-full">
+    </div>
+    <button data-mock="Filtro por área aplicado" data-mock-kind="info" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-2 text-body-sm hover:bg-surface-container-low">
+      <span class="material-symbols-outlined" style="font-size:18px">category</span>Área <span class="material-symbols-outlined" style="font-size:18px">expand_more</span></button>
+    <button data-mock="Filtro por conceito aplicado" data-mock-kind="info" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-2 text-body-sm hover:bg-surface-container-low">
+      <span class="material-symbols-outlined" style="font-size:18px">grade</span>Conceito <span class="material-symbols-outlined" style="font-size:18px">expand_more</span></button>
+  </div>
+
+  <!-- Tabela -->
+  <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+    <div class="overflow-x-auto">
+      <table id="tbl-ppgs" class="w-full text-left">
+        <thead>
+          <tr class="bg-surface-container-low text-label-sm uppercase tracking-wide text-on-surface-variant">
+            <th class="px-5 py-3 font-semibold">Programa</th>
+            <th class="px-5 py-3 font-semibold">Instituição</th>
+            <th class="px-5 py-3 font-semibold">Nível</th>
+            <th class="px-5 py-3 font-semibold">Conceito</th>
+            <th class="px-5 py-3 font-semibold">Situação</th>
+            <th class="px-5 py-3 font-semibold text-right">Ações</th>
+          </tr>
+        </thead>
+        <tbody class="text-body-sm divide-y divide-surface-container-high">
+          <!-- linha 1 -->
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><p class="font-semibold text-on-surface">Informática Aplicada</p><p class="text-label-sm text-on-surface-variant">Ciências Exatas e da Terra</p></td>
+            <td class="px-5 py-4 text-on-surface-variant">UFXX · Campus Centro</td>
+            <td class="px-5 py-4"><span class="bg-surface-container px-2 py-0.5 rounded text-label-sm">Mestrado/Doutorado</span></td>
+            <td class="px-5 py-4"><span class="font-display font-bold text-primary">5</span></td>
+            <td class="px-5 py-4"><span class="inline-flex items-center gap-1 bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-success"></span>Ativo</span></td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="cadastro-ppg.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Relatório do programa gerado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Relatório"><span class="material-symbols-outlined" style="font-size:18px">description</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><p class="font-semibold text-on-surface">Engenharia de Produção</p><p class="text-label-sm text-on-surface-variant">Engenharias</p></td>
+            <td class="px-5 py-4 text-on-surface-variant">USP · São Paulo</td>
+            <td class="px-5 py-4"><span class="bg-surface-container px-2 py-0.5 rounded text-label-sm">Doutorado</span></td>
+            <td class="px-5 py-4"><span class="font-display font-bold text-primary">6</span></td>
+            <td class="px-5 py-4"><span class="inline-flex items-center gap-1 bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-success"></span>Ativo</span></td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="cadastro-ppg.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Relatório do programa gerado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Relatório"><span class="material-symbols-outlined" style="font-size:18px">description</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><p class="font-semibold text-on-surface">Saúde Coletiva</p><p class="text-label-sm text-on-surface-variant">Ciências da Saúde</p></td>
+            <td class="px-5 py-4 text-on-surface-variant">UFRJ · Rio de Janeiro</td>
+            <td class="px-5 py-4"><span class="bg-surface-container px-2 py-0.5 rounded text-label-sm">Mestrado</span></td>
+            <td class="px-5 py-4"><span class="font-display font-bold text-primary">4</span></td>
+            <td class="px-5 py-4"><span class="inline-flex items-center gap-1 bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-success"></span>Ativo</span></td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="cadastro-ppg.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Relatório do programa gerado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Relatório"><span class="material-symbols-outlined" style="font-size:18px">description</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><p class="font-semibold text-on-surface">Letras e Linguística</p><p class="text-label-sm text-on-surface-variant">Linguística, Letras e Artes</p></td>
+            <td class="px-5 py-4 text-on-surface-variant">UnB · Brasília</td>
+            <td class="px-5 py-4"><span class="bg-surface-container px-2 py-0.5 rounded text-label-sm">Mestrado/Doutorado</span></td>
+            <td class="px-5 py-4"><span class="font-display font-bold text-primary">5</span></td>
+            <td class="px-5 py-4"><span class="inline-flex items-center gap-1 bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-outline"></span>Em avaliação</span></td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="cadastro-ppg.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Relatório do programa gerado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Relatório"><span class="material-symbols-outlined" style="font-size:18px">description</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><p class="font-semibold text-on-surface">Agronomia Tropical</p><p class="text-label-sm text-on-surface-variant">Ciências Agrárias</p></td>
+            <td class="px-5 py-4 text-on-surface-variant">UFAM · Manaus</td>
+            <td class="px-5 py-4"><span class="bg-surface-container px-2 py-0.5 rounded text-label-sm">Mestrado</span></td>
+            <td class="px-5 py-4"><span class="font-display font-bold text-primary">3</span></td>
+            <td class="px-5 py-4"><span class="inline-flex items-center gap-1 bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-success"></span>Ativo</span></td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="cadastro-ppg.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Relatório do programa gerado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Relatório"><span class="material-symbols-outlined" style="font-size:18px">description</span></button>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flex items-center justify-between px-5 py-3 border-t border-surface-container-high text-body-sm text-on-surface-variant">
+      <span>Exibindo 5 de 1.240 programas</span>
+      <div class="flex items-center gap-1">
+        <button data-mock="Página anterior" data-mock-kind="info" class="p-1.5 rounded hover:bg-surface-container"><span class="material-symbols-outlined" style="font-size:18px">chevron_left</span></button>
+        <span class="w-8 h-8 flex items-center justify-center rounded bg-primary text-on-primary font-semibold">1</span>
+        <button data-mock="Indo para a página 2" data-mock-kind="info" class="w-8 h-8 rounded hover:bg-surface-container">2</button>
+        <button data-mock="Indo para a página 3" data-mock-kind="info" class="w-8 h-8 rounded hover:bg-surface-container">3</button>
+        <button data-mock="Próxima página" data-mock-kind="info" class="p-1.5 rounded hover:bg-surface-container"><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meu Painel — Pós-Graduação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Painel do Programa" data-crumb="Meu Painel"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1280px]">
+  <div class="flex flex-wrap items-center justify-between gap-3 -mt-1">
+    <p class="text-on-surface-variant text-body-md">Acompanhe o desempenho do <strong class="text-on-surface">PPG em Informática Aplicada</strong> e os prazos da avaliação quadrienal.</p>
+    <a href="cadastro-ppg.html" class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+      <span class="material-symbols-outlined" style="font-size:20px">edit_note</span>Editar cadastro</a>
+  </div>
+
+  <!-- Alerta de prazo -->
+  <div class="flex items-start gap-3 bg-success/10 border border-success/30 rounded-xl p-4">
+    <span class="material-symbols-outlined text-secondary">event_upcoming</span>
+    <div class="flex-1">
+      <p class="text-body-sm font-semibold text-on-surface">Coleta Sucupira aberta até 30 de junho</p>
+      <p class="text-label-sm text-on-surface-variant">Faltam 4 indicadores para homologar antes do envio à CAPES.</p>
+    </div>
+    <a href="relatorios.html" class="text-body-sm font-semibold text-secondary hover:underline whitespace-nowrap">Revisar agora</a>
+  </div>
+
+  <!-- KPIs do PPG -->
+  <section class="grid grid-cols-2 xl:grid-cols-4 gap-4">
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <p class="text-body-sm text-on-surface-variant mb-2">Conceito CAPES</p>
+      <div class="flex items-end justify-between"><span class="font-display text-headline-lg text-primary">5</span>
+      <span class="text-label-sm bg-success/15 text-secondary px-2 py-0.5 rounded">Estável</span></div>
+    </div>
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <p class="text-body-sm text-on-surface-variant mb-2">Docentes Permanentes</p>
+      <div class="flex items-end justify-between"><span class="font-display text-headline-lg text-primary">18</span>
+      <span class="text-label-sm bg-success/15 text-secondary px-2 py-0.5 rounded">↑ 2</span></div>
+    </div>
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <p class="text-body-sm text-on-surface-variant mb-2">Discentes Ativos</p>
+      <div class="flex items-end justify-between"><span class="font-display text-headline-lg text-primary">96</span>
+      <span class="text-label-sm bg-success/15 text-secondary px-2 py-0.5 rounded">↑ 9%</span></div>
+    </div>
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <p class="text-body-sm text-on-surface-variant mb-2">Produção (ano)</p>
+      <div class="flex items-end justify-between"><span class="font-display text-headline-lg text-primary">112</span>
+      <span class="text-label-sm bg-success/15 text-secondary px-2 py-0.5 rounded">↑ 14%</span></div>
+    </div>
+  </section>
+
+  <div class="grid lg:grid-cols-3 gap-6">
+    <!-- Produção por trimestre (barras CSS) -->
+    <section class="lg:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <div class="flex items-center justify-between mb-5">
+        <div><h2 class="font-display text-headline-md text-primary">Produção Acadêmica</h2>
+        <p class="text-label-sm text-on-surface-variant">Publicações por mês · 2024</p></div>
+        <span class="text-label-sm bg-surface-container-low px-3 py-1 rounded-full">Meta anual: 120</span>
+      </div>
+      <div class="flex items-end gap-3 h-48 px-2">
+        <!-- cada barra: altura proporcional -->
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:45%"></div><span class="text-label-sm text-on-surface-variant">Jan</span></div>
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:60%"></div><span class="text-label-sm text-on-surface-variant">Fev</span></div>
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:52%"></div><span class="text-label-sm text-on-surface-variant">Mar</span></div>
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:78%"></div><span class="text-label-sm text-on-surface-variant">Abr</span></div>
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:70%"></div><span class="text-label-sm text-on-surface-variant">Mai</span></div>
+        <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary" style="height:95%"></div><span class="text-label-sm text-primary font-semibold">Jun</span></div>
+      </div>
+    </section>
+
+    <!-- Pendências -->
+    <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+      <h2 class="font-display text-headline-md text-primary mb-4">Pendências</h2>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-error" style="font-size:20px">radio_button_unchecked</span>
+          <div><p class="text-body-sm text-on-surface">Vincular 3 artigos Qualis A1</p><p class="text-label-sm text-on-surface-variant">Plataforma Sucupira</p></div></li>
+        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-error" style="font-size:20px">radio_button_unchecked</span>
+          <div><p class="text-body-sm text-on-surface">Atualizar linha de pesquisa em IoT</p><p class="text-label-sm text-on-surface-variant">Cadastro do PPG</p></div></li>
+        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary" style="font-size:20px">check_circle</span>
+          <div><p class="text-body-sm text-on-surface line-through opacity-60">Confirmar corpo docente</p><p class="text-label-sm text-on-surface-variant">Concluído</p></div></li>
+        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-secondary" style="font-size:20px">check_circle</span>
+          <div><p class="text-body-sm text-on-surface line-through opacity-60">Renovar convênio Sorbonne</p><p class="text-label-sm text-on-surface-variant">Concluído</p></div></li>
+      </ul>
+      <a href="cadastro-ppg.html" class="mt-4 flex items-center justify-center gap-1 text-body-sm font-semibold text-primary hover:underline pt-3 border-t border-surface-container-high">
+        Resolver pendências <span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></a>
+    </section>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>

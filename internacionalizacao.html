@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Internacionalização e Convênios</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Internacionalização e Convênios" data-crumb="Convênios"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1280px]">
+  <p class="text-on-surface-variant text-body-md -mt-1">Gerencie parcerias acadêmicas e acordos de cooperação internacional.</p>
+
+  <!-- Barra de ações -->
+  <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-3 flex flex-wrap gap-3 items-center">
+    <div class="flex items-center gap-2 bg-surface-container-low rounded-lg px-3 py-2 flex-1 min-w-[220px]">
+      <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">search</span>
+      <input data-filter="#tbl-conv" placeholder="Buscar universidade…" class="bg-transparent outline-none text-body-sm w-full">
+    </div>
+    <button data-mock="Filtro por país aplicado" data-mock-kind="info" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-2 text-body-sm hover:bg-surface-container-low">
+      <span class="material-symbols-outlined" style="font-size:18px">public</span>País <span class="material-symbols-outlined" style="font-size:18px">expand_more</span></button>
+    <button data-mock="Filtro por tipo de acordo aplicado" data-mock-kind="info" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-2 text-body-sm hover:bg-surface-container-low">
+      <span class="material-symbols-outlined" style="font-size:18px">handshake</span>Tipo de acordo <span class="material-symbols-outlined" style="font-size:18px">expand_more</span></button>
+    <a href="convenio.html" class="flex items-center gap-2 bg-primary text-on-primary px-4 py-2 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+      <span class="material-symbols-outlined" style="font-size:20px">add</span>Novo convênio</a>
+  </div>
+
+  <!-- Tabela -->
+  <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+    <div class="overflow-x-auto">
+      <table id="tbl-conv" class="w-full text-left">
+        <thead>
+          <tr class="bg-surface-container-low text-label-sm uppercase tracking-wide text-on-surface-variant">
+            <th class="px-5 py-3 font-semibold">Universidade Parceira</th>
+            <th class="px-5 py-3 font-semibold">País</th>
+            <th class="px-5 py-3 font-semibold">Tipo de Acordo</th>
+            <th class="px-5 py-3 font-semibold">Vigência</th>
+            <th class="px-5 py-3 font-semibold text-right">Ações</th>
+          </tr>
+        </thead>
+        <tbody class="text-body-sm divide-y divide-surface-container-high">
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-success/15 text-secondary flex items-center justify-center"><span class="material-symbols-outlined" style="font-size:18px">account_balance</span></span><span class="font-semibold text-on-surface">Technical University of Munich</span></div></td>
+            <td class="px-5 py-4 text-on-surface-variant"><span class="material-symbols-outlined align-middle" style="font-size:16px">place</span> Alemanha</td>
+            <td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Intercâmbio de Pesquisa</span></td>
+            <td class="px-5 py-4 text-on-surface-variant">Jan 2024 – Dez 2028</td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="convenio.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Convênio removido" data-mock-kind="error" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Remover"><span class="material-symbols-outlined" style="font-size:18px">delete</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-success/15 text-secondary flex items-center justify-center"><span class="material-symbols-outlined" style="font-size:18px">account_balance</span></span><span class="font-semibold text-on-surface">University of Toronto</span></div></td>
+            <td class="px-5 py-4 text-on-surface-variant"><span class="material-symbols-outlined align-middle" style="font-size:16px">place</span> Canadá</td>
+            <td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Dupla Titulação</span></td>
+            <td class="px-5 py-4 text-on-surface-variant">Mar 2023 – Mar 2027</td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="convenio.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Convênio removido" data-mock-kind="error" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Remover"><span class="material-symbols-outlined" style="font-size:18px">delete</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-success/15 text-secondary flex items-center justify-center"><span class="material-symbols-outlined" style="font-size:18px">account_balance</span></span><span class="font-semibold text-on-surface">Kyoto University</span></div></td>
+            <td class="px-5 py-4 text-on-surface-variant"><span class="material-symbols-outlined align-middle" style="font-size:16px">place</span> Japão</td>
+            <td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Cooperação Técnica</span></td>
+            <td class="px-5 py-4 text-on-surface-variant">Jun 2022 – Jun 2026</td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="convenio.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Convênio removido" data-mock-kind="error" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Remover"><span class="material-symbols-outlined" style="font-size:18px">delete</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-success/15 text-secondary flex items-center justify-center"><span class="material-symbols-outlined" style="font-size:18px">account_balance</span></span><span class="font-semibold text-on-surface">Université Sorbonne</span></div></td>
+            <td class="px-5 py-4 text-on-surface-variant"><span class="material-symbols-outlined align-middle" style="font-size:16px">place</span> França</td>
+            <td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Intercâmbio Acadêmico</span></td>
+            <td class="px-5 py-4 text-on-surface-variant">Set 2023 – Ago 2025</td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="convenio.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Convênio removido" data-mock-kind="error" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Remover"><span class="material-symbols-outlined" style="font-size:18px">delete</span></button>
+            </div></td>
+          </tr>
+          <tr class="hover:bg-surface-container-low/60">
+            <td class="px-5 py-4"><div class="flex items-center gap-3"><span class="w-9 h-9 rounded-lg bg-success/15 text-secondary flex items-center justify-center"><span class="material-symbols-outlined" style="font-size:18px">account_balance</span></span><span class="font-semibold text-on-surface">Universidad de Buenos Aires</span></div></td>
+            <td class="px-5 py-4 text-on-surface-variant"><span class="material-symbols-outlined align-middle" style="font-size:16px">place</span> Argentina</td>
+            <td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Mobilidade Docente</span></td>
+            <td class="px-5 py-4 text-on-surface-variant">Out 2022 – Jan 2026</td>
+            <td class="px-5 py-4"><div class="flex justify-end gap-1">
+              <a href="convenio.html" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Editar"><span class="material-symbols-outlined" style="font-size:18px">edit</span></a>
+              <button data-mock="Convênio removido" data-mock-kind="error" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Remover"><span class="material-symbols-outlined" style="font-size:18px">delete</span></button>
+            </div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="flex items-center justify-between px-5 py-3 border-t border-surface-container-high text-body-sm text-on-surface-variant">
+      <span>Exibindo 5 de 128 convênios</span>
+      <div class="flex items-center gap-1">
+        <button data-mock="Página anterior" data-mock-kind="info" class="p-1.5 rounded hover:bg-surface-container"><span class="material-symbols-outlined" style="font-size:18px">chevron_left</span></button>
+        <span class="w-8 h-8 flex items-center justify-center rounded bg-primary text-on-primary font-semibold">1</span>
+        <button data-mock="Indo para a página 2" data-mock-kind="info" class="w-8 h-8 rounded hover:bg-surface-container">2</button>
+        <button data-mock="Indo para a página 3" data-mock-kind="info" class="w-8 h-8 rounded hover:bg-surface-container">3</button>
+        <button data-mock="Próxima página" data-mock-kind="info" class="p-1.5 rounded hover:bg-surface-container"><span class="material-symbols-outlined" style="font-size:18px">chevron_right</span></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPIs convênios -->
+  <section class="grid sm:grid-cols-3 gap-4">
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+      <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">public</span></span>
+      <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Países parceiros</p><p class="font-display text-headline-md text-on-surface">42</p></div>
+    </div>
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+      <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">groups</span></span>
+      <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Alunos em intercâmbio</p><p class="font-display text-headline-md text-on-surface">815</p></div>
+    </div>
+    <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+      <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">description</span></span>
+      <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Acordos ativos</p><p class="font-display text-headline-md text-on-surface">128</p></div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>

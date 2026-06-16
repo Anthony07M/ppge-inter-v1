@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Centro de Relatórios CAPES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Centro de Relatórios CAPES" data-crumb="Relatórios"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1280px]">
+  <p class="text-on-surface-variant text-body-md -mt-1">Gere relatórios detalhados e exporte indicadores de desempenho do programa.</p>
+
+  <!-- Filtros de geração -->
+  <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <label class="block"><span class="text-label-sm font-semibold text-on-surface">Indicador CAPES</span>
+        <select class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10">
+          <option selected>Produção Bibliográfica</option><option>Formação de Recursos Humanos</option><option>Inserção Social</option></select></label>
+      <label class="block"><span class="text-label-sm font-semibold text-on-surface">Período</span>
+        <input type="date" class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"></label>
+      <label class="block"><span class="text-label-sm font-semibold text-on-surface">Unidade acadêmica</span>
+        <input value="Ciências Exatas e da Terra" class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"></label>
+      <label class="block"><span class="text-label-sm font-semibold text-on-surface">Nível</span>
+        <select class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10">
+          <option selected>Mestrado</option><option>Doutorado</option><option>Ambos</option></select></label>
+    </div>
+    <div class="flex justify-end mt-4">
+      <button data-mock="Relatório gerado — veja a prévia abaixo" class="flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+        <span class="material-symbols-outlined" style="font-size:20px">bar_chart</span>Gerar relatório</button>
+    </div>
+  </section>
+
+  <div class="grid lg:grid-cols-3 gap-6">
+    <!-- Prévia de dados -->
+    <section class="lg:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-surface-container-high">
+        <h2 class="font-display text-headline-md text-primary">Visualização de Dados</h2>
+        <div class="flex gap-2">
+          <button data-mock="Exportando para Excel…" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-1.5 text-body-sm hover:bg-surface-container-low"><span class="material-symbols-outlined" style="font-size:18px">table_view</span>Excel</button>
+          <button data-mock="Exportando para PDF…" class="flex items-center gap-1.5 border border-surface-container-high rounded-lg px-3 py-1.5 text-body-sm hover:bg-surface-container-low"><span class="material-symbols-outlined" style="font-size:18px">picture_as_pdf</span>PDF</button>
+        </div>
+      </div>
+      <table class="w-full text-left">
+        <thead><tr class="bg-surface-container-low text-label-sm uppercase tracking-wide text-on-surface-variant">
+          <th class="px-5 py-3 font-semibold">ID</th><th class="px-5 py-3 font-semibold">Indicador</th>
+          <th class="px-5 py-3 font-semibold">Valor gerado</th><th class="px-5 py-3 font-semibold">Status</th></tr></thead>
+        <tbody class="text-body-sm divide-y divide-surface-container-high">
+          <tr><td class="px-5 py-4 font-mono text-on-surface-variant">#RP-9283</td><td class="px-5 py-4 text-on-surface">Produção Bibliográfica (A1)</td><td class="px-5 py-4 font-semibold text-on-surface">452 artigos</td><td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Processado</span></td></tr>
+          <tr><td class="px-5 py-4 font-mono text-on-surface-variant">#RP-9284</td><td class="px-5 py-4 text-on-surface">Citações Totais</td><td class="px-5 py-4 font-semibold text-on-surface">1.240 citações</td><td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Processado</span></td></tr>
+          <tr><td class="px-5 py-4 font-mono text-on-surface-variant">#RP-9285</td><td class="px-5 py-4 text-on-surface">Formação de Doutores</td><td class="px-5 py-4 font-semibold text-on-surface">88 titulados</td><td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Processado</span></td></tr>
+          <tr><td class="px-5 py-4 font-mono text-on-surface-variant">#RP-9286</td><td class="px-5 py-4 text-on-surface">Impacto Qualis</td><td class="px-5 py-4 font-semibold text-on-surface">9.2 index</td><td class="px-5 py-4"><span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded text-label-sm">Aguardando</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Resumo + guia -->
+    <div class="space-y-6">
+      <section class="rounded-xl p-5 text-white relative overflow-hidden" style="background:linear-gradient(135deg,#154212,#2d5a27)">
+        <div class="absolute -right-6 -top-6 opacity-20"><span class="material-symbols-outlined" style="font-size:120px">trending_up</span></div>
+        <p class="text-label-sm uppercase tracking-wide text-white/70 relative">Total de indicadores mapeados</p>
+        <p class="font-display text-headline-xl relative">2.841</p>
+        <p class="text-label-sm text-white/80 relative flex items-center gap-1"><span class="material-symbols-outlined" style="font-size:16px">arrow_upward</span>+12% em relação ao ano anterior</p>
+      </section>
+      <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+        <div class="flex items-center gap-2 mb-3"><span class="material-symbols-outlined text-primary">info</span><h3 class="font-display text-body-lg font-semibold text-on-surface">Guia rápido CAPES</h3></div>
+        <p class="text-body-sm text-on-surface-variant">Os relatórios usam a última atualização da Plataforma Sucupira. Confirme que a produção foi homologada pela sua unidade antes de exportar o PDF final.</p>
+        <a href="#" data-mock="Abrindo critérios de avaliação (simulado)" data-mock-kind="info" class="mt-3 inline-flex items-center gap-1 text-body-sm font-semibold text-primary hover:underline">Ver critérios de avaliação <span class="material-symbols-outlined" style="font-size:16px">open_in_new</span></a>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>

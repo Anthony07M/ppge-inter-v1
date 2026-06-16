@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Comitês Temáticos</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Comitê: Saúde Única" data-crumb="Governança › Comitês Temáticos"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1280px]">
+  <!-- Cabeçalho do comitê -->
+  <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex flex-wrap items-center gap-5">
+    <div class="flex items-center gap-3">
+      <span class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">eco</span></span>
+      <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Coordenador responsável</p><p class="font-display text-body-lg font-semibold text-on-surface">Dra. Helena Souza</p></div>
+    </div>
+    <div class="hidden sm:block w-px h-10 bg-surface-container-high"></div>
+    <div class="flex items-center gap-3">
+      <span class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">folder_open</span></span>
+      <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Total de projetos</p><p class="font-display text-body-lg font-semibold text-on-surface">24</p></div>
+    </div>
+    <button data-mock="Relatório do comitê exportado" class="ml-auto flex items-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+      <span class="material-symbols-outlined" style="font-size:20px">download</span>Exportar relatório</button>
+  </section>
+
+  <!-- Abas -->
+  <div class="border-b border-surface-container-high flex gap-1">
+    <button class="tab px-4 py-2.5 text-body-sm font-semibold text-on-surface-variant border-b-2 border-transparent" data-tab="membros">Membros</button>
+    <button class="tab px-4 py-2.5 text-body-sm font-semibold text-on-surface-variant border-b-2 border-transparent" data-tab="universidades">Universidades</button>
+    <button class="tab px-4 py-2.5 text-body-sm font-semibold text-primary border-b-2 border-primary" data-tab="impacto">Impacto / Produção</button>
+  </div>
+
+  <!-- Painel: Impacto -->
+  <div id="panel-impacto" class="space-y-6">
+    <div class="grid lg:grid-cols-3 gap-6">
+      <section class="lg:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+        <div class="flex items-center justify-between mb-5">
+          <div><h2 class="font-display text-headline-md text-primary">Produção Acadêmica</h2><p class="text-label-sm text-on-surface-variant">Publicações por mês · 2024</p></div>
+          <div class="flex gap-1 text-label-sm"><span class="px-3 py-1 rounded-full bg-surface-container-low">2023</span><span class="px-3 py-1 rounded-full bg-primary text-on-primary">2024</span></div>
+        </div>
+        <div class="flex items-end gap-3 h-44 px-2">
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:40%"></div><span class="text-label-sm text-on-surface-variant">Jan</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:62%"></div><span class="text-label-sm text-on-surface-variant">Fev</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:50%"></div><span class="text-label-sm text-on-surface-variant">Mar</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:82%"></div><span class="text-label-sm text-on-surface-variant">Abr</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary-fixed-dim" style="height:72%"></div><span class="text-label-sm text-on-surface-variant">Mai</span></div>
+          <div class="flex-1 flex flex-col items-center gap-2"><div class="w-full rounded-t bg-primary" style="height:100%"></div><span class="text-label-sm text-primary font-semibold">Jun</span></div>
+        </div>
+        <div class="flex gap-4 mt-4 text-label-sm text-on-surface-variant">
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-primary inline-block"></span>Alvo atingido</span>
+          <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-sm bg-primary-fixed-dim inline-block"></span>Em progresso</span>
+        </div>
+      </section>
+
+      <!-- Donut de impacto -->
+      <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+        <h2 class="font-display text-headline-md text-primary mb-1">Distribuição de Impacto</h2>
+        <p class="text-label-sm text-on-surface-variant mb-4">Por área de atuação</p>
+        <div class="flex justify-center mb-4">
+          <div class="relative w-40 h-40">
+            <div class="w-full h-full rounded-full" style="background:conic-gradient(#154212 0 40%,#2d5a27 40% 72%,#a1d494 72% 100%)"></div>
+            <div class="absolute inset-4 bg-surface-container-lowest rounded-full flex flex-col items-center justify-center">
+              <span class="font-display text-headline-md text-primary">87%</span><span class="text-label-sm text-on-surface-variant">Global</span>
+            </div>
+          </div>
+        </div>
+        <ul class="space-y-2 text-body-sm">
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm" style="background:#154212"></span>Saúde Ambiental</span><span class="font-semibold">40%</span></li>
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm" style="background:#2d5a27"></span>Zoonoses</span><span class="font-semibold">32%</span></li>
+          <li class="flex items-center justify-between"><span class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm" style="background:#a1d494"></span>Biodiversidade</span><span class="font-semibold">28%</span></li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- mini KPIs -->
+    <section class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+        <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">science</span></span>
+        <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Laboratórios</p><p class="font-display text-headline-md text-on-surface">12</p></div>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+        <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">groups</span></span>
+        <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Pesquisadores</p><p class="font-display text-headline-md text-on-surface">48</p></div>
+      </div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 flex items-center gap-4">
+        <span class="w-11 h-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center"><span class="material-symbols-outlined">public</span></span>
+        <div><p class="text-label-sm uppercase tracking-wide text-on-surface-variant">Parcerias internac.</p><p class="font-display text-headline-md text-on-surface">05 países</p></div>
+      </div>
+    </section>
+
+    <!-- Produções recentes -->
+    <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+      <div class="flex items-center justify-between px-5 py-4 border-b border-surface-container-high">
+        <h2 class="font-display text-headline-md text-primary">Produções Recentes</h2>
+        <a href="relatorios.html" class="text-body-sm font-semibold text-primary hover:underline">Ver tudo</a>
+      </div>
+      <table class="w-full text-left">
+        <thead><tr class="bg-surface-container-low text-label-sm uppercase tracking-wide text-on-surface-variant">
+          <th class="px-5 py-3 font-semibold">Publicação</th><th class="px-5 py-3 font-semibold">Autor</th>
+          <th class="px-5 py-3 font-semibold">Universidade</th><th class="px-5 py-3 font-semibold">Status</th><th class="px-5 py-3 font-semibold">Data</th></tr></thead>
+        <tbody class="text-body-sm divide-y divide-surface-container-high">
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Impacto da Urbanização em Zoonoses Regionais</td><td class="px-5 py-4 text-on-surface-variant">Dr. Marcos Rebouças</td><td class="px-5 py-4 text-on-surface-variant">USP</td><td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Publicado</span></td><td class="px-5 py-4 text-on-surface-variant">12 jun 2024</td></tr>
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Monitoramento de Recursos Hídricos e Fauna</td><td class="px-5 py-4 text-on-surface-variant">Dra. Aline Mendes</td><td class="px-5 py-4 text-on-surface-variant">UFRJ</td><td class="px-5 py-4"><span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded text-label-sm">Em revisão</span></td><td class="px-5 py-4 text-on-surface-variant">08 jun 2024</td></tr>
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Estudo Comparativo de Biomas e Resistência Viral</td><td class="px-5 py-4 text-on-surface-variant">Prof. Carlos Lima</td><td class="px-5 py-4 text-on-surface-variant">UnB</td><td class="px-5 py-4"><span class="bg-success/15 text-secondary px-2 py-0.5 rounded text-label-sm">Publicado</span></td><td class="px-5 py-4 text-on-surface-variant">28 mai 2024</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- Painel: Membros -->
+  <div id="panel-membros" class="hidden">
+    <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+      <table class="w-full text-left">
+        <thead><tr class="bg-surface-container-low text-label-sm uppercase tracking-wide text-on-surface-variant">
+          <th class="px-5 py-3 font-semibold">Pesquisador</th><th class="px-5 py-3 font-semibold">Papel</th><th class="px-5 py-3 font-semibold">Instituição</th></tr></thead>
+        <tbody class="text-body-sm divide-y divide-surface-container-high">
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Dra. Helena Souza</td><td class="px-5 py-4 text-on-surface-variant">Coordenadora</td><td class="px-5 py-4 text-on-surface-variant">USP</td></tr>
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Dr. Marcos Rebouças</td><td class="px-5 py-4 text-on-surface-variant">Pesquisador sênior</td><td class="px-5 py-4 text-on-surface-variant">UFXX</td></tr>
+          <tr><td class="px-5 py-4 font-medium text-on-surface">Dra. Aline Mendes</td><td class="px-5 py-4 text-on-surface-variant">Pesquisadora</td><td class="px-5 py-4 text-on-surface-variant">UFRJ</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <!-- Painel: Universidades -->
+  <div id="panel-universidades" class="hidden">
+    <section class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5"><p class="font-semibold text-on-surface">USP</p><p class="text-label-sm text-on-surface-variant">São Paulo · 8 projetos</p></div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5"><p class="font-semibold text-on-surface">UFRJ</p><p class="text-label-sm text-on-surface-variant">Rio de Janeiro · 6 projetos</p></div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5"><p class="font-semibold text-on-surface">UnB</p><p class="text-label-sm text-on-surface-variant">Brasília · 5 projetos</p></div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5"><p class="font-semibold text-on-surface">UFAM</p><p class="text-label-sm text-on-surface-variant">Manaus · 3 projetos</p></div>
+      <div class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5"><p class="font-semibold text-on-surface">UFMG</p><p class="text-label-sm text-on-surface-variant">Belo Horizonte · 2 projetos</p></div>
+    </section>
+  </div>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+<script>
+  var panels = { membros:'panel-membros', universidades:'panel-universidades', impacto:'panel-impacto' };
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){ x.classList.remove('text-primary','border-primary'); x.classList.add('text-on-surface-variant','border-transparent'); });
+      t.classList.add('text-primary','border-primary'); t.classList.remove('text-on-surface-variant','border-transparent');
+      Object.values(panels).forEach(function(id){ document.getElementById(id).classList.add('hidden'); });
+      document.getElementById(panels[t.getAttribute('data-tab')]).classList.remove('hidden');
+    });
+  });
+</script>
+</body>
+</html>

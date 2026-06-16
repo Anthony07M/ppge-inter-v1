@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acesso — Plataforma Programa de Pós-Graduação</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body class="min-h-screen">
+<div class="min-h-screen grid lg:grid-cols-2">
+  <!-- Painel de marca -->
+  <div class="relative hidden lg:flex flex-col justify-between p-12 text-white overflow-hidden"
+       style="background:linear-gradient(135deg,#154212 0%,#2d5a27 55%,#3b6934 100%)">
+    <div class="absolute inset-0 opacity-20" style="background:radial-gradient(circle at 30% 20%,#a1d494 0,transparent 45%),radial-gradient(circle at 80% 80%,#88b04b 0,transparent 40%)"></div>
+    <div class="relative flex items-center gap-2.5">
+      <div class="w-10 h-10 rounded-lg bg-white/15 backdrop-blur flex items-center justify-center">
+        <span class="material-symbols-outlined">account_balance</span>
+      </div>
+      <span class="font-display font-semibold text-lg">Programa de Pós-Graduação</span>
+    </div>
+    <div class="relative">
+      <div class="w-16 h-16 rounded-xl bg-white/15 backdrop-blur flex items-center justify-center mb-6">
+        <span class="material-symbols-outlined" style="font-size:32px">hub</span>
+      </div>
+      <h1 class="font-display text-headline-xl leading-tight mb-3">Portal Institucional</h1>
+      <p class="text-white/80 text-body-lg max-w-md">Gestão integrada de Programas de Pós-Graduação, internacionalização e indicadores CAPES — em um só lugar.</p>
+    </div>
+    <div class="relative flex gap-8 text-white/80">
+      <div><p class="font-display text-2xl font-bold text-white">184</p><p class="text-label-sm">Universidades</p></div>
+      <div><p class="font-display text-2xl font-bold text-white">1.240</p><p class="text-label-sm">PPGs conectados</p></div>
+      <div><p class="font-display text-2xl font-bold text-white">612</p><p class="text-label-sm">Convênios ativos</p></div>
+    </div>
+  </div>
+
+  <!-- Formulário -->
+  <div class="flex items-center justify-center p-6 sm:p-12 bg-surface-bright">
+    <div class="w-full max-w-md">
+      <div class="lg:hidden flex items-center gap-2.5 mb-8">
+        <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+          <span class="material-symbols-outlined" style="font-size:20px">account_balance</span></div>
+        <span class="font-display font-semibold text-primary">Programa de Pós-Graduação</span>
+      </div>
+
+      <h2 class="font-display text-headline-lg text-on-surface mb-1">Acesso ao Sistema</h2>
+      <p class="text-on-surface-variant text-body-md mb-8">Insira suas credenciais institucionais para continuar.</p>
+
+      <form id="login-form" novalidate>
+        <label class="block text-label-sm uppercase tracking-wide text-on-surface-variant mb-1.5">E-mail</label>
+        <div class="flex items-center gap-2 bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-3 mb-4 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition">
+          <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">mail</span>
+          <input type="email" value="helena.souza@ppg.edu.br" class="bg-transparent outline-none w-full text-body-md" />
+        </div>
+
+        <div class="flex items-center justify-between mb-1.5">
+          <label class="block text-label-sm uppercase tracking-wide text-on-surface-variant">Senha</label>
+          <a href="#" data-mock="Enviamos um link de redefinição (simulado)" class="text-label-sm font-semibold text-primary hover:underline">Esqueci minha senha</a>
+        </div>
+        <div class="flex items-center gap-2 bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-3 mb-5 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition">
+          <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">lock</span>
+          <input type="password" value="demo1234" class="bg-transparent outline-none w-full text-body-md" />
+        </div>
+
+        <!-- Seleção de perfil (entra no fluxo dos dois papéis) -->
+        <p class="text-label-sm uppercase tracking-wide text-on-surface-variant mb-2">Entrar como</p>
+        <div class="grid grid-cols-2 gap-3 mb-5">
+          <button type="button" data-role="gestor" class="role-btn text-left border-2 border-primary rounded-lg p-3 bg-primary/5">
+            <span class="material-symbols-outlined text-primary mb-1">travel_explore</span>
+            <p class="text-body-sm font-semibold text-on-surface">Gestor Nacional</p>
+            <p class="text-label-sm text-on-surface-variant">Visão CAPES</p>
+          </button>
+          <button type="button" data-role="coordenador" class="role-btn text-left border-2 border-surface-container-high rounded-lg p-3 hover:border-outline-variant transition">
+            <span class="material-symbols-outlined text-on-surface-variant mb-1">edit_note</span>
+            <p class="text-body-sm font-semibold text-on-surface">Coordenador</p>
+            <p class="text-label-sm text-on-surface-variant">Meu PPG</p>
+          </button>
+        </div>
+
+        <label class="flex items-center gap-2 mb-6 text-body-sm text-on-surface-variant cursor-pointer">
+          <input type="checkbox" class="rounded text-primary focus:ring-primary"> Lembrar neste dispositivo
+        </label>
+
+        <button type="submit" class="w-full flex items-center justify-center gap-2 bg-primary text-on-primary py-3.5 rounded-lg font-semibold hover:bg-primary-container transition-colors">
+          Entrar <span class="material-symbols-outlined" style="font-size:20px">login</span>
+        </button>
+
+        <div class="flex items-center gap-3 my-6 text-on-surface-variant">
+          <div class="h-px bg-surface-container-high flex-1"></div>
+          <span class="text-label-sm uppercase tracking-wide">Login com SSO</span>
+          <div class="h-px bg-surface-container-high flex-1"></div>
+        </div>
+        <button type="button" data-mock="Redirecionando para o provedor SSO (simulado)" data-mock-kind="info" class="w-full flex items-center justify-center gap-2 border border-surface-container-high rounded-lg py-3 text-body-sm font-medium hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined" style="font-size:20px">badge</span> Acessar com credencial federada
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+<script>
+  var selectedRole = 'gestor';
+  document.querySelectorAll('.role-btn').forEach(function (b) {
+    b.addEventListener('click', function () {
+      selectedRole = b.getAttribute('data-role');
+      document.querySelectorAll('.role-btn').forEach(function (x) {
+        x.classList.remove('border-primary', 'bg-primary/5');
+        x.classList.add('border-surface-container-high');
+        x.querySelector('.material-symbols-outlined').classList.replace('text-primary', 'text-on-surface-variant');
+      });
+      b.classList.add('border-primary', 'bg-primary/5');
+      b.classList.remove('border-surface-container-high');
+      b.querySelector('.material-symbols-outlined').classList.replace('text-on-surface-variant', 'text-primary');
+    });
+  });
+  document.getElementById('login-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    PPG.setProfile(selectedRole);
+    PPG.toast('Acesso autorizado — bem-vindo!', 'success');
+    setTimeout(function () {
+      location.href = PPG.profiles[selectedRole].home;
+    }, 600);
+  });
+</script>
+</body>
+</html>

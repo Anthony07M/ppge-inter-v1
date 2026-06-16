@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detalhe do Convênio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="assets/theme.js"></script>
+</head>
+<body>
+<div data-layout data-title="Editar Convênio" data-crumb="Convênios › Technical University of Munich"></div>
+
+<main id="page" class="p-6 space-y-6 max-w-[1000px]">
+  <a href="internacionalizacao.html" class="inline-flex items-center gap-1 text-body-sm font-semibold text-primary hover:underline">
+    <span class="material-symbols-outlined" style="font-size:18px">arrow_back</span>Voltar para convênios</a>
+
+  <form data-mock-form="Convênio atualizado com sucesso" class="grid lg:grid-cols-3 gap-6">
+    <!-- Coluna principal -->
+    <div class="lg:col-span-2 space-y-6">
+      <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+        <div class="flex items-center gap-2 px-5 py-4 border-b border-surface-container-high">
+          <span class="material-symbols-outlined text-primary">handshake</span>
+          <h2 class="font-display text-headline-md text-primary">Dados do Acordo</h2>
+        </div>
+        <div class="p-5 grid sm:grid-cols-2 gap-4">
+          <label class="block sm:col-span-2"><span class="text-label-sm font-semibold text-on-surface">Universidade parceira</span>
+            <input class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" value="Technical University of Munich"></label>
+          <label class="block"><span class="text-label-sm font-semibold text-on-surface">País</span>
+            <input class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10" value="Alemanha"></label>
+          <label class="block"><span class="text-label-sm font-semibold text-on-surface">Tipo de acordo</span>
+            <select class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10">
+              <option selected>Intercâmbio de Pesquisa</option><option>Dupla Titulação</option><option>Cooperação Técnica</option><option>Mobilidade Docente</option></select></label>
+          <label class="block"><span class="text-label-sm font-semibold text-on-surface">Início da vigência</span>
+            <input type="month" value="2024-01" class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"></label>
+          <label class="block"><span class="text-label-sm font-semibold text-on-surface">Fim da vigência</span>
+            <input type="month" value="2028-12" class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10"></label>
+          <label class="block sm:col-span-2"><span class="text-label-sm font-semibold text-on-surface">Objeto do convênio</span>
+            <textarea rows="3" class="mt-1.5 w-full bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-2.5 text-body-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10">Cooperação em pesquisa aplicada nas áreas de inteligência artificial, com mobilidade de docentes e coorientação de teses.</textarea></label>
+        </div>
+      </section>
+
+      <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+        <div class="flex items-center gap-2 px-5 py-4 border-b border-surface-container-high">
+          <span class="material-symbols-outlined text-primary">attach_file</span>
+          <h2 class="font-display text-headline-md text-primary">Documentos</h2>
+        </div>
+        <div class="p-5 space-y-2">
+          <div class="flex items-center gap-3 p-3 rounded-lg border border-surface-container-high">
+            <span class="material-symbols-outlined text-error">picture_as_pdf</span>
+            <div class="flex-1"><p class="text-body-sm font-medium text-on-surface">Termo_de_cooperacao_TUM.pdf</p><p class="text-label-sm text-on-surface-variant">2,4 MB · enviado em 12 jan 2024</p></div>
+            <button type="button" data-mock="Download iniciado" class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined" style="font-size:18px">download</span></button>
+          </div>
+          <button type="button" data-mock="Seletor de arquivo abierto (simulado)" data-mock-kind="info" class="w-full flex items-center justify-center gap-2 border border-dashed border-surface-container-high rounded-lg py-3 text-body-sm text-on-surface-variant hover:bg-surface-container-low transition">
+            <span class="material-symbols-outlined" style="font-size:20px">upload</span>Anexar documento</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Coluna lateral -->
+    <div class="space-y-6">
+      <section class="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
+        <p class="text-label-sm uppercase tracking-wide text-on-surface-variant mb-3">Status</p>
+        <span class="inline-flex items-center gap-1.5 bg-success/15 text-secondary px-3 py-1 rounded text-body-sm font-medium"><span class="w-2 h-2 rounded-full bg-success"></span>Vigente</span>
+        <div class="mt-5 space-y-3 text-body-sm">
+          <div class="flex justify-between"><span class="text-on-surface-variant">Alunos vinculados</span><span class="font-semibold text-on-surface">23</span></div>
+          <div class="flex justify-between"><span class="text-on-surface-variant">Publicações conjuntas</span><span class="font-semibold text-on-surface">41</span></div>
+          <div class="flex justify-between"><span class="text-on-surface-variant">Renovações</span><span class="font-semibold text-on-surface">2</span></div>
+        </div>
+      </section>
+      <div class="flex flex-col gap-3">
+        <button type="submit" class="flex items-center justify-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-primary-container transition">
+          <span class="material-symbols-outlined" style="font-size:20px">save</span>Salvar alterações</button>
+        <button type="button" data-mock="Convênio arquivado" data-mock-kind="error" class="flex items-center justify-center gap-2 border border-error/40 text-error px-5 py-2.5 rounded-lg text-body-sm font-semibold hover:bg-error/5 transition">
+          <span class="material-symbols-outlined" style="font-size:20px">archive</span>Arquivar convênio</button>
+      </div>
+    </div>
+  </form>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/layout.js"></script>
+</body>
+</html>
