@@ -89,11 +89,6 @@
             '<span class="material-symbols-outlined text-on-surface-variant" style="font-size:18px">unfold_more</span>' +
           '</button>' +
         '</div>' +
-        // faixa indicadora do perfil ativo
-        '<div class="px-6 py-1.5 bg-primary/5 border-t border-primary/10 flex items-center gap-2 text-label-sm text-primary">' +
-          '<span class="material-symbols-outlined" style="font-size:16px">visibility</span>' +
-          'Você está navegando como <strong data-bind="papel"></strong> — clique no avatar para alternar de perfil.' +
-        '</div>' +
       '</header>';
   }
 

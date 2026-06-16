@@ -49,7 +49,7 @@
         <label class="block text-label-sm uppercase tracking-wide text-on-surface-variant mb-1.5">E-mail</label>
         <div class="flex items-center gap-2 bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-3 mb-4 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition">
           <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">mail</span>
-          <input type="email" value="helena.souza@ppg.edu.br" class="bg-transparent outline-none w-full text-body-md" />
+          <input type="email" value="helena.souza@ppg.edu.br" class="bg-transparent outline-none border-0 focus:ring-0 w-full text-body-md" />
         </div>
 
         <div class="flex items-center justify-between mb-1.5">
@@ -58,22 +58,7 @@
         </div>
         <div class="flex items-center gap-2 bg-surface-container-low border border-surface-container-high rounded-lg px-3 py-3 mb-5 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/10 transition">
           <span class="material-symbols-outlined text-on-surface-variant" style="font-size:20px">lock</span>
-          <input type="password" value="demo1234" class="bg-transparent outline-none w-full text-body-md" />
-        </div>
-
-        <!-- Seleção de perfil (entra no fluxo dos dois papéis) -->
-        <p class="text-label-sm uppercase tracking-wide text-on-surface-variant mb-2">Entrar como</p>
-        <div class="grid grid-cols-2 gap-3 mb-5">
-          <button type="button" data-role="gestor" class="role-btn text-left border-2 border-primary rounded-lg p-3 bg-primary/5">
-            <span class="material-symbols-outlined text-primary mb-1">travel_explore</span>
-            <p class="text-body-sm font-semibold text-on-surface">Gestor Nacional</p>
-            <p class="text-label-sm text-on-surface-variant">Visão CAPES</p>
-          </button>
-          <button type="button" data-role="coordenador" class="role-btn text-left border-2 border-surface-container-high rounded-lg p-3 hover:border-outline-variant transition">
-            <span class="material-symbols-outlined text-on-surface-variant mb-1">edit_note</span>
-            <p class="text-body-sm font-semibold text-on-surface">Coordenador</p>
-            <p class="text-label-sm text-on-surface-variant">Meu PPG</p>
-          </button>
+          <input type="password" value="demo1234" class="bg-transparent outline-none border-0 focus:ring-0 w-full text-body-md" />
         </div>
 
         <label class="flex items-center gap-2 mb-6 text-body-sm text-on-surface-variant cursor-pointer">
@@ -99,26 +84,13 @@
 
 <script src="assets/app.js"></script>
 <script>
-  var selectedRole = 'gestor';
-  document.querySelectorAll('.role-btn').forEach(function (b) {
-    b.addEventListener('click', function () {
-      selectedRole = b.getAttribute('data-role');
-      document.querySelectorAll('.role-btn').forEach(function (x) {
-        x.classList.remove('border-primary', 'bg-primary/5');
-        x.classList.add('border-surface-container-high');
-        x.querySelector('.material-symbols-outlined').classList.replace('text-primary', 'text-on-surface-variant');
-      });
-      b.classList.add('border-primary', 'bg-primary/5');
-      b.classList.remove('border-surface-container-high');
-      b.querySelector('.material-symbols-outlined').classList.replace('text-on-surface-variant', 'text-primary');
-    });
-  });
   document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
-    PPG.setProfile(selectedRole);
+    var role = sessionStorage.getItem('ppg_profile') || 'gestor';
+    PPG.setProfile(role);
     PPG.toast('Acesso autorizado — bem-vindo!', 'success');
     setTimeout(function () {
-      location.href = PPG.profiles[selectedRole].home;
+      location.href = PPG.profiles[role].home;
     }, 600);
   });
 </script>

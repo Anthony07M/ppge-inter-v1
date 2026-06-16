@@ -72,6 +72,7 @@ Perfil ativo é guardado em `sessionStorage` (chave `ppg_profile`).
 - Nome do produto: "Programa de Pós-Graduação" (descartada a marca antiga "EcoSystem/Admin Global").
 - Multipage em vez de single-page app (decisão do dev).
 - O "seletor de perfil" pós-login foi **integrado à tela de login** em vez de virar tela separada (menos cliques).
+- Seleção de papel (Gestor/Coordenador) foi **removida da tela de login** — a troca de perfil existe só no avatar da topbar e em Configurações. No futuro o papel virá do Keycloak.
 - Documentação para humanos: `PROPOSTA.md` (equipe) e `README.md` (deploy).
 
 ## Próximos passos / em aberto
